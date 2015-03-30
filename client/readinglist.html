@@ -1,0 +1,20 @@
+<head>
+  <title>Reading List</title>
+</head>
+
+<body>
+	<h1>Reading List</h1>
+	<p>A simple reading list implemented with Meteor</p>
+	<br>
+	{{> bookList}}
+</body>
+
+<template name="bookItem">
+	<p>{{author}} - {{title}}</p>
+</template>
+
+<template name="bookList">
+	{{#each books}}
+		{{> bookItem}}
+	{{/each}}	
+</template>
